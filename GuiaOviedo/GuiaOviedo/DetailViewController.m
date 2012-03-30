@@ -48,35 +48,28 @@
 - (void)serializar {
     
     NSError* error;
-    NSDictionary* fotosObtenidas = [NSJSONSerialization 
+    NSDictionary* resultado = [NSJSONSerialization 
                                     JSONObjectWithData:self.datosInternet
                                     options:kNilOptions
                                     error:&error];
     
-    NSArray *resultado=[fotosObtenidas objectForKey:@"photos"];//Diccionario con todos los resultados
+    NSArray *fotos=[[resultado objectForKey:@"photos"]objectForKey:(@"photo")];
     
-    for(NSDictionary *dic in resultado)
+    for(NSDictionary *foto in fotos)
     {
+        Fotografia *f=[[Fotografia alloc]init];
         
-        //URL de la tienda
-        CLLocationCoordinate2D coordenadas;
-        coordenadas.latitude=[[dic valueForKeyPath:@"geometry.location.lat"] floatValue];
-        coordenadas.longitude=[[dic valueForKeyPath:@"geometry.location.lng"] floatValue];
+        f.titulo=@"f";
         
-        //Creo un objeto de la clase miAnotacion que implmenta el protocolo MKAnnotation
-        miAnotacion *anotacion=[[miAnotacion alloc]initWithCoordenada:coordenadas titulo:[dic valueForKey:@"name"] subtitulo:[dic valueForKey:@"vicinity"]];
-        [self.tiendas addObject:anotacion];
+        /*La url se consigue con las propiedades que obtenemos del JSON:
+        //http://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
+        */
         
-        for (miAnotacion *an in self.tiendas) 
-        {
-            [self.mapa addAnnotation:an];//Añado las anotaciones en el mapa
-        }
-    }
-    
-    //Paro el indicador
-    if([self.indicador isAnimating])
-    {
-        [self.indicador stopAnimating];
+        NSString *url=[NSString stringWithFormat:@"http://farm%@.staticflickr.com/%@/%@_%@.jpg",
+                      [foto valueForKey:@"farm"],
+                      [foto valueForKey:@"server"],
+                      [foto valueForKey:@"id"],
+                      [foto valueForKey:@"secret"]];
     }
 }
 
