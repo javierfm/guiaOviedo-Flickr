@@ -18,6 +18,67 @@
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
 @synthesize masterPopoverController = _masterPopoverController;
+@synthesize listadoFotos,datosInternet;
+
+#pragma mark - Métodos del NSURLConnectionDelegate
+
+-(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    [self.datosInternet setLength:0];
+}
+
+-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    [self.datosInternet appendData:data];//Se van añadiendo datos
+}
+
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    [self serializar];//Serializamos los resultados obtenidos del JSON
+    NSLog(@"%@",self.datosInternet);
+}
+
+-(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    NSLog(@"%@",[error localizedDescription]);
+}
+
+#pragma mark - Métodos del controlador
+
+- (void)serializar {
+    
+    NSError* error;
+    NSDictionary* fotosObtenidas = [NSJSONSerialization 
+                                    JSONObjectWithData:self.datosInternet
+                                    options:kNilOptions
+                                    error:&error];
+    
+    NSArray *resultado=[fotosObtenidas objectForKey:@"photos"];//Diccionario con todos los resultados
+    
+    for(NSDictionary *dic in resultado)
+    {
+        
+        //URL de la tienda
+        CLLocationCoordinate2D coordenadas;
+        coordenadas.latitude=[[dic valueForKeyPath:@"geometry.location.lat"] floatValue];
+        coordenadas.longitude=[[dic valueForKeyPath:@"geometry.location.lng"] floatValue];
+        
+        //Creo un objeto de la clase miAnotacion que implmenta el protocolo MKAnnotation
+        miAnotacion *anotacion=[[miAnotacion alloc]initWithCoordenada:coordenadas titulo:[dic valueForKey:@"name"] subtitulo:[dic valueForKey:@"vicinity"]];
+        [self.tiendas addObject:anotacion];
+        
+        for (miAnotacion *an in self.tiendas) 
+        {
+            [self.mapa addAnnotation:an];//Añado las anotaciones en el mapa
+        }
+    }
+    
+    //Paro el indicador
+    if([self.indicador isAnimating])
+    {
+        [self.indicador stopAnimating];
+    }
+}
 
 #pragma mark - Managing the detail item
 
@@ -57,6 +118,23 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    
+    self.listadoFotos=[[NSMutableArray alloc]initWithCapacity:0];
+    
+    NSMutableURLRequest *peticionFotos=[NSURLRequest requestWithURL:URLServicio];
+    
+    //Pido las fotos que cumplan los requisitos:tag:oviedo,geolocalizadas,accurcy:city
+    NSURLConnection *conexionPedirFotos=[[NSURLConnection alloc]initWithRequest:peticionFotos delegate:self];
+    
+    if(conexionPedirFotos)
+    {
+        self.datosInternet=[NSMutableData data];//Objeto que guardará los datos
+    }
+    else
+    {
+        NSLog(@"La conexión no se ha podido realizar");
+    }    
+
 }
 
 - (void)viewDidUnload
