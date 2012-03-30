@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8CA1C6191525AC4900BCF239 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA1C6181525AC4900BCF239 /* UIKit.framework */; };
+		8CA1C61B1525AC4900BCF239 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA1C61A1525AC4900BCF239 /* Foundation.framework */; };
+		8CA1C61D1525AC4900BCF239 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA1C61C1525AC4900BCF239 /* CoreGraphics.framework */; };
+		8CA1C61F1525AC4900BCF239 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA1C61E1525AC4900BCF239 /* CoreData.framework */; };
+		8CA1C6251525AC4900BCF239 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CA1C6231525AC4900BCF239 /* InfoPlist.strings */; };
+		8CA1C6271525AC4900BCF239 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1C6261525AC4900BCF239 /* main.m */; };
+		8CA1C62B1525AC4900BCF239 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1C62A1525AC4900BCF239 /* AppDelegate.m */; };
+		8CA1C62E1525AC4900BCF239 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA1C62C1525AC4900BCF239 /* MainStoryboard.storyboard */; };
+		8CA1C6311525AC4900BCF239 /* GuiaOviedo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1C62F1525AC4900BCF239 /* GuiaOviedo.xcdatamodeld */; };
+		8CA1C6341525AC4900BCF239 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1C6331525AC4900BCF239 /* MasterViewController.m */; };
+		8CA1C6371525AC4900BCF239 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1C6361525AC4900BCF239 /* DetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8CA1C6141525AC4900BCF239 /* GuiaOviedo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuiaOviedo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CA1C6181525AC4900BCF239 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8CA1C61A1525AC4900BCF239 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8CA1C61C1525AC4900BCF239 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8CA1C61E1525AC4900BCF239 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8CA1C6221525AC4900BCF239 /* GuiaOviedo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GuiaOviedo-Info.plist"; sourceTree = "<group>"; };
+		8CA1C6241525AC4900BCF239 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8CA1C6261525AC4900BCF239 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8CA1C6281525AC4900BCF239 /* GuiaOviedo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GuiaOviedo-Prefix.pch"; sourceTree = "<group>"; };
+		8CA1C6291525AC4900BCF239 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8CA1C62A1525AC4900BCF239 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8CA1C62D1525AC4900BCF239 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		8CA1C6301525AC4900BCF239 /* GuiaOviedo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GuiaOviedo.xcdatamodel; sourceTree = "<group>"; };
+		8CA1C6321525AC4900BCF239 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		8CA1C6331525AC4900BCF239 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		8CA1C6351525AC4900BCF239 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		8CA1C6361525AC4900BCF239 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8CA1C6111525AC4900BCF239 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CA1C6191525AC4900BCF239 /* UIKit.framework in Frameworks */,
+				8CA1C61B1525AC4900BCF239 /* Foundation.framework in Frameworks */,
+				8CA1C61D1525AC4900BCF239 /* CoreGraphics.framework in Frameworks */,
+				8CA1C61F1525AC4900BCF239 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8CA1C6091525AC4800BCF239 = {
+			isa = PBXGroup;
+			children = (
+				8CA1C6201525AC4900BCF239 /* GuiaOviedo */,
+				8CA1C6171525AC4900BCF239 /* Frameworks */,
+				8CA1C6151525AC4900BCF239 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8CA1C6151525AC4900BCF239 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CA1C6141525AC4900BCF239 /* GuiaOviedo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CA1C6171525AC4900BCF239 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CA1C6181525AC4900BCF239 /* UIKit.framework */,
+				8CA1C61A1525AC4900BCF239 /* Foundation.framework */,
+				8CA1C61C1525AC4900BCF239 /* CoreGraphics.framework */,
+				8CA1C61E1525AC4900BCF239 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CA1C6201525AC4900BCF239 /* GuiaOviedo */ = {
+			isa = PBXGroup;
+			children = (
+				8CA1C6291525AC4900BCF239 /* AppDelegate.h */,
+				8CA1C62A1525AC4900BCF239 /* AppDelegate.m */,
+				8CA1C62C1525AC4900BCF239 /* MainStoryboard.storyboard */,
+				8CA1C6321525AC4900BCF239 /* MasterViewController.h */,
+				8CA1C6331525AC4900BCF239 /* MasterViewController.m */,
+				8CA1C6351525AC4900BCF239 /* DetailViewController.h */,
+				8CA1C6361525AC4900BCF239 /* DetailViewController.m */,
+				8CA1C62F1525AC4900BCF239 /* GuiaOviedo.xcdatamodeld */,
+				8CA1C6211525AC4900BCF239 /* Supporting Files */,
+			);
+			path = GuiaOviedo;
+			sourceTree = "<group>";
+		};
+		8CA1C6211525AC4900BCF239 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8CA1C6221525AC4900BCF239 /* GuiaOviedo-Info.plist */,
+				8CA1C6231525AC4900BCF239 /* InfoPlist.strings */,
+				8CA1C6261525AC4900BCF239 /* main.m */,
+				8CA1C6281525AC4900BCF239 /* GuiaOviedo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8CA1C6131525AC4900BCF239 /* GuiaOviedo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CA1C63A1525AC4900BCF239 /* Build configuration list for PBXNativeTarget "GuiaOviedo" */;
+			buildPhases = (
+				8CA1C6101525AC4900BCF239 /* Sources */,
+				8CA1C6111525AC4900BCF239 /* Frameworks */,
+				8CA1C6121525AC4900BCF239 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GuiaOviedo;
+			productName = GuiaOviedo;
+			productReference = 8CA1C6141525AC4900BCF239 /* GuiaOviedo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8CA1C60B1525AC4800BCF239 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 8CA1C60E1525AC4800BCF239 /* Build configuration list for PBXProject "GuiaOviedo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8CA1C6091525AC4800BCF239;
+			productRefGroup = 8CA1C6151525AC4900BCF239 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CA1C6131525AC4900BCF239 /* GuiaOviedo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8CA1C6121525AC4900BCF239 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CA1C6251525AC4900BCF239 /* InfoPlist.strings in Resources */,
+				8CA1C62E1525AC4900BCF239 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CA1C6101525AC4900BCF239 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CA1C6271525AC4900BCF239 /* main.m in Sources */,
+				8CA1C62B1525AC4900BCF239 /* AppDelegate.m in Sources */,
+				8CA1C6311525AC4900BCF239 /* GuiaOviedo.xcdatamodeld in Sources */,
+				8CA1C6341525AC4900BCF239 /* MasterViewController.m in Sources */,
+				8CA1C6371525AC4900BCF239 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8CA1C6231525AC4900BCF239 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CA1C6241525AC4900BCF239 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8CA1C62C1525AC4900BCF239 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CA1C62D1525AC4900BCF239 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8CA1C6381525AC4900BCF239 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		8CA1C6391525AC4900BCF239 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8CA1C63B1525AC4900BCF239 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GuiaOviedo/GuiaOviedo-Prefix.pch";
+				INFOPLIST_FILE = "GuiaOviedo/GuiaOviedo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8CA1C63C1525AC4900BCF239 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GuiaOviedo/GuiaOviedo-Prefix.pch";
+				INFOPLIST_FILE = "GuiaOviedo/GuiaOviedo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8CA1C60E1525AC4800BCF239 /* Build configuration list for PBXProject "GuiaOviedo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CA1C6381525AC4900BCF239 /* Debug */,
+				8CA1C6391525AC4900BCF239 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CA1C63A1525AC4900BCF239 /* Build configuration list for PBXNativeTarget "GuiaOviedo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CA1C63B1525AC4900BCF239 /* Debug */,
+				8CA1C63C1525AC4900BCF239 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8CA1C62F1525AC4900BCF239 /* GuiaOviedo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8CA1C6301525AC4900BCF239 /* GuiaOviedo.xcdatamodel */,
+			);
+			currentVersion = 8CA1C6301525AC4900BCF239 /* GuiaOviedo.xcdatamodel */;
+			path = GuiaOviedo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8CA1C60B1525AC4800BCF239 /* Project object */;
+}
