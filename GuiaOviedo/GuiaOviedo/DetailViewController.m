@@ -59,7 +59,7 @@
     {
         
         //URL de la tienda
-        CLLocationCoordinate2D coordenadas;
+      /*  CLLocationCoordinate2D coordenadas;
         coordenadas.latitude=[[dic valueForKeyPath:@"geometry.location.lat"] floatValue];
         coordenadas.longitude=[[dic valueForKeyPath:@"geometry.location.lng"] floatValue];
         
@@ -77,7 +77,7 @@
     if([self.indicador isAnimating])
     {
         [self.indicador stopAnimating];
-    }
+    }*/
 }
 
 #pragma mark - Managing the detail item
