@@ -15,63 +15,12 @@
 
 @implementation DetailViewController
 
+
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
 @synthesize masterPopoverController = _masterPopoverController;
-@synthesize listadoFotos,datosInternet;
+@synthesize datosInternet;
 
-#pragma mark - Métodos del NSURLConnectionDelegate
-
--(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
-{
-    [self.datosInternet setLength:0];
-}
-
--(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
-{
-    [self.datosInternet appendData:data];//Se van añadiendo datos
-}
-
--(void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
-    [self serializar];//Serializamos los resultados obtenidos del JSON
-    NSLog(@"%@",self.datosInternet);
-}
-
--(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
-{
-    NSLog(@"%@",[error localizedDescription]);
-}
-
-#pragma mark - Métodos del controlador
-
-- (void)serializar {
-    
-    NSError* error;
-    NSDictionary* resultado = [NSJSONSerialization 
-                                    JSONObjectWithData:self.datosInternet
-                                    options:kNilOptions
-                                    error:&error];
-    
-    NSArray *fotos=[[resultado objectForKey:@"photos"]objectForKey:(@"photo")];
-    
-    for(NSDictionary *foto in fotos)
-    {
-        Fotografia *f=[[Fotografia alloc]init];
-        
-        f.titulo=@"f";
-        
-        /*La url se consigue con las propiedades que obtenemos del JSON:
-        //http://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
-        */
-        
-        NSString *url=[NSString stringWithFormat:@"http://farm%@.staticflickr.com/%@/%@_%@.jpg",
-                      [foto valueForKey:@"farm"],
-                      [foto valueForKey:@"server"],
-                      [foto valueForKey:@"id"],
-                      [foto valueForKey:@"secret"]];
-    }
-}
 
 #pragma mark - Managing the detail item
 
@@ -112,22 +61,6 @@
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
     
-    self.listadoFotos=[[NSMutableArray alloc]initWithCapacity:0];
-    
-    NSMutableURLRequest *peticionFotos=[NSURLRequest requestWithURL:URLServicio];
-    
-    //Pido las fotos que cumplan los requisitos:tag:oviedo,geolocalizadas,accurcy:city
-    NSURLConnection *conexionPedirFotos=[[NSURLConnection alloc]initWithRequest:peticionFotos delegate:self];
-    
-    if(conexionPedirFotos)
-    {
-        self.datosInternet=[NSMutableData data];//Objeto que guardará los datos
-    }
-    else
-    {
-        NSLog(@"La conexión no se ha podido realizar");
-    }    
-
 }
 
 - (void)viewDidUnload
@@ -163,6 +96,99 @@
     return YES;
 }
 
+#pragma mark - Métodos del NSURLConnectionDelegate
+
+-(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    [self.datosInternet setLength:0];
+}
+
+-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    [self.datosInternet appendData:data];//Se van añadiendo datos
+}
+
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    [self serializar];//Serializamos los resultados obtenidos del JSON
+}
+
+-(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    NSLog(@"%@",[error localizedDescription]);
+}
+
+#pragma mark - Métodos del controlador
+
+//Hacemos dos tipos de peticiones: una para obtener datos y otra para obtener coordenadas
+-(void)obtenerFotos
+{
+        NSMutableURLRequest *request=[NSURLRequest requestWithURL:URLServicio];
+        
+        NSURLConnection *conex=[[NSURLConnection alloc]initWithRequest:request delegate:self];
+        
+        if(conex)
+        {
+            self.datosInternet=[NSMutableData data];//Objeto que guardará los datos
+        }
+        else
+        {
+            NSLog(@"La conexión no se ha podido realizar");
+        }    
+}
+
+//Serializamos los datos de los servicios.
+- (void)serializar
+{
+    
+    NSError* error;
+    NSDictionary* resultado = [NSJSONSerialization 
+                               JSONObjectWithData:self.datosInternet
+                               options:kNilOptions
+                               error:&error];
+    
+    //No estamos serializando una coordenada sino las fotos
+    if(self.esCoordenada==NO)
+    {
+        NSArray *fotos=[[resultado objectForKey:@"photos"]objectForKey:(@"photo")];
+        
+        for(NSDictionary *foto in fotos)
+        {
+            Fotografia *f=[[Fotografia alloc]init];
+            f.titulo=@"f";
+            
+            /*La url se consigue con las propiedades que obtenemos del JSON:
+             //http://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
+             */
+            NSString *url=[NSString stringWithFormat:@"http://farm%@.staticflickr.com/%@/%@_%@.jpg",
+                           [foto valueForKey:@"farm"],
+                           [foto valueForKey:@"server"],
+                           [foto valueForKey:@"id"],
+                           [foto valueForKey:@"secret"]];
+            f.urlImagen=[[NSURL alloc]initWithString:url];
+            
+            //El id lo necesitamos para pedir las coordenadas
+            f.Id=(int)[foto valueForKey:@"id"];
+            NSLog(@"foto %@",f.urlImagen);
+            [self.listadoFotos addObject:f];//Guardamos la Fotografía en el Array
+        }
+        
+    }
+    
+    //Serializo las coordenadas de la foto seleccionada
+    else
+    {
+        NSLog(@"Entro a serializar fotos");
+        //NSArray *loc=[[resultado objectForKey:@"photos"]objectForKey:(@"location")];
+        NSArray *lala=[resultado allKeys];
+        NSLog(@"%i",[lala count]);
+        for(NSString *key in lala)
+        {
+            NSLog(@"clave %@",key);
+        }
+    }
+    
+}
 #pragma mark - Split view
 
 - (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController

@@ -14,5 +14,6 @@
 @property(nonatomic,retain)NSURL *urlImagen;
 @property(nonatomic,assign)CLLocationCoordinate2D coordenadas;
 @property(nonatomic,retain)NSString *titulo;//titulo o autor de la foto
+@property(nonatomic,assign)int Id;//lo necesitamos para sus coordenadas
 
 @end

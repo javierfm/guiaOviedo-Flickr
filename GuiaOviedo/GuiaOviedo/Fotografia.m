@@ -9,5 +9,5 @@
 #import "Fotografia.h"
 
 @implementation Fotografia
-@synthesize urlImagen,coordenadas,titulo;
+@synthesize urlImagen,coordenadas,titulo,Id;
 @end

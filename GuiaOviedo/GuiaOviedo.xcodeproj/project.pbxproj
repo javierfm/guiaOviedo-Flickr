@@ -20,6 +20,7 @@
 		8CA1C6371525AC4900BCF239 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1C6361525AC4900BCF239 /* DetailViewController.m */; };
 		8CAD5DE91525BE500007FD45 /* Fotografia.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD5DE81525BE500007FD45 /* Fotografia.m */; };
 		8CAD5DF01525BEEA0007FD45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAD5DEF1525BEEA0007FD45 /* CoreLocation.framework */; };
+		8CB19F70152AEA160013A7C0 /* localizaciones.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CB19F6F152AEA160013A7C0 /* localizaciones.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		8CAD5DE71525BE500007FD45 /* Fotografia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fotografia.h; sourceTree = "<group>"; };
 		8CAD5DE81525BE500007FD45 /* Fotografia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fotografia.m; sourceTree = "<group>"; };
 		8CAD5DEF1525BEEA0007FD45 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8CB19F6F152AEA160013A7C0 /* localizaciones.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = localizaciones.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				8CA1C6361525AC4900BCF239 /* DetailViewController.m */,
 				8CA1C62F1525AC4900BCF239 /* GuiaOviedo.xcdatamodeld */,
 				8CA1C6211525AC4900BCF239 /* Supporting Files */,
+				8CB19F6F152AEA160013A7C0 /* localizaciones.plist */,
 			);
 			path = GuiaOviedo;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			files = (
 				8CA1C6251525AC4900BCF239 /* InfoPlist.strings in Resources */,
 				8CA1C62E1525AC4900BCF239 /* MainStoryboard.storyboard in Resources */,
+				8CB19F70152AEA160013A7C0 /* localizaciones.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
