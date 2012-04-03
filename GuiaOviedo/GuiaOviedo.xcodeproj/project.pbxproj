@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C1C4887152AF25B00E1CE87 /* localizaciones.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C1C4886152AF25B00E1CE87 /* localizaciones.plist */; };
 		8C1CCEFB152AEC62002DE527 /* SubMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1CCEFA152AEC62002DE527 /* SubMenuViewController.m */; };
 		8C9EBCF31529C6B900142BF0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9EBCF21529C6B900142BF0 /* MapKit.framework */; };
 		8CA1C6191525AC4900BCF239 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA1C6181525AC4900BCF239 /* UIKit.framework */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C1C4886152AF25B00E1CE87 /* localizaciones.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = localizaciones.plist; sourceTree = "<group>"; };
 		8C1CCEF9152AEC62002DE527 /* SubMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubMenuViewController.h; sourceTree = "<group>"; };
 		8C1CCEFA152AEC62002DE527 /* SubMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubMenuViewController.m; sourceTree = "<group>"; };
 		8C9EBCF21529C6B900142BF0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -110,6 +112,7 @@
 				8CA1C6291525AC4900BCF239 /* AppDelegate.h */,
 				8CA1C62A1525AC4900BCF239 /* AppDelegate.m */,
 				8CA1C62C1525AC4900BCF239 /* MainStoryboard.storyboard */,
+				8C1C4886152AF25B00E1CE87 /* localizaciones.plist */,
 				8CA1C62F1525AC4900BCF239 /* GuiaOviedo.xcdatamodeld */,
 				8CA1C6211525AC4900BCF239 /* Supporting Files */,
 			);
@@ -179,6 +182,7 @@
 			files = (
 				8CA1C6251525AC4900BCF239 /* InfoPlist.strings in Resources */,
 				8CA1C62E1525AC4900BCF239 /* MainStoryboard.storyboard in Resources */,
+				8C1C4887152AF25B00E1CE87 /* localizaciones.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
