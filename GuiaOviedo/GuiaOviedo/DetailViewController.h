@@ -10,7 +10,7 @@
 #import "MapKit/MapKit.h"
 
 
-@interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface DetailViewController : UIViewController <UISplitViewControllerDelegate,MKMapViewDelegate,MKOverlay>
 
 @property (strong, nonatomic) id detailItem;
 

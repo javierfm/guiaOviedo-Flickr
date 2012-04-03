@@ -25,8 +25,8 @@
     splitViewController.delegate = (id)navigationController.topViewController;
 
     UINavigationController *masterNavigationController = [splitViewController.viewControllers objectAtIndex:0];
-    MasterViewController *controller = (MasterViewController *)masterNavigationController.topViewController;
-    controller.managedObjectContext = self.managedObjectContext;
+  /*  MasterViewController *controller = (MasterViewController *)masterNavigationController.topViewController;
+    controller.managedObjectContext = self.managedObjectContext;*/
     return YES;
 }
 							
