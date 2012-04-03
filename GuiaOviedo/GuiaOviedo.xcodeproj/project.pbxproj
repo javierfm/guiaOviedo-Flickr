@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C9EBCF31529C6B900142BF0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9EBCF21529C6B900142BF0 /* MapKit.framework */; };
 		8CA1C6191525AC4900BCF239 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA1C6181525AC4900BCF239 /* UIKit.framework */; };
 		8CA1C61B1525AC4900BCF239 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA1C61A1525AC4900BCF239 /* Foundation.framework */; };
 		8CA1C61D1525AC4900BCF239 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA1C61C1525AC4900BCF239 /* CoreGraphics.framework */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C9EBCF21529C6B900142BF0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8CA1C6141525AC4900BCF239 /* GuiaOviedo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuiaOviedo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA1C6181525AC4900BCF239 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8CA1C61A1525AC4900BCF239 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9EBCF31529C6B900142BF0 /* MapKit.framework in Frameworks */,
 				8CA1C6191525AC4900BCF239 /* UIKit.framework in Frameworks */,
 				8CA1C61B1525AC4900BCF239 /* Foundation.framework in Frameworks */,
 				8CA1C61D1525AC4900BCF239 /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +78,7 @@
 		8CA1C6171525AC4900BCF239 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C9EBCF21529C6B900142BF0 /* MapKit.framework */,
 				8CA1C6181525AC4900BCF239 /* UIKit.framework */,
 				8CA1C61A1525AC4900BCF239 /* Foundation.framework */,
 				8CA1C61C1525AC4900BCF239 /* CoreGraphics.framework */,
@@ -290,6 +294,7 @@
 				8CA1C63C1525AC4900BCF239 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
