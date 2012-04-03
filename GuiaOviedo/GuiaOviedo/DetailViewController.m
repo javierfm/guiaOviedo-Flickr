@@ -11,6 +11,7 @@
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
+-(void)centrarMapaEnCoordenada:(CLLocationCoordinate2D) coordenada;
 @end
 
 @implementation DetailViewController
@@ -69,6 +70,11 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+   
+    CLLocationCoordinate2D coordenada;
+    coordenada.latitude=43.3602994;
+    coordenada.longitude=-5.844781;
+    [self centrarMapaEnCoordenada:coordenada];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -108,11 +114,11 @@
     self.masterPopoverController = nil;
 }
 
-#pragma mark -MKMapView
--(void)mapViewDidFinishLoadingMap:(MKMapView *)mapView{
-    CLLocationCoordinate2D coordenada;
-    coordenada.latitude=43.3602994;
-    coordenada.longitude=-5.844781;
+#pragma mark - MKMapView
+
+
+#pragma mark - Metodos propios
+-(void)centrarMapaEnCoordenada:(CLLocationCoordinate2D) coordenada{
     //creamos una varible con la region en la que se centrará el mapa
     MKCoordinateRegion region;
     //a esta region le asignamos la coordenada en la que se situará
@@ -121,7 +127,8 @@
     region.span.latitudeDelta =.003;
     region.span.longitudeDelta=.003;
     //hacemos que el mapa se centre en la region anterior de forma animada
-    [self.mapa setRegion:region animated:TRUE];
+    [mapa setRegion:region animated:TRUE];
 }
+
 
 @end

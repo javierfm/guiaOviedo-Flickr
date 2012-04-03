@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Event">
-        <attribute name="timeStamp" optional="YES" attributeType="Date"/>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="10K549" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Evento" syncable="YES">
+        <attribute name="fin" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="inicio" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="programa" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="multimedias" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Multimedia" inverseName="evento" inverseEntity="Multimedia" syncable="YES"/>
+        <relationship name="ubicacion" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="PuntoInteres" inverseName="eventos" inverseEntity="PuntoInteres" syncable="YES"/>
     </entity>
+    <entity name="Multimedia" syncable="YES">
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tipo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="evento" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Evento" inverseName="multimedias" inverseEntity="Evento" syncable="YES"/>
+    </entity>
+    <entity name="PuntoInteres" syncable="YES">
+        <attribute name="direccion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitud" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitud" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="telefono" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tipo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="web" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="eventos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evento" inverseName="ubicacion" inverseEntity="Evento" syncable="YES"/>
+    </entity>
+    <fetchRequest name="Alojamientos" entity="PuntoInteres" predicateString="tipo == &quot;alojamientos&quot;"/>
+    <fetchRequest name="Lugares" entity="PuntoInteres" predicateString="tipo == &quot;lugar&quot;"/>
+    <fetchRequest name="Restaurantes" entity="PuntoInteres" predicateString="tipo == &quot;restaurante&quot;"/>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
+        <element name="Evento" positionX="133" positionY="45" width="128" height="135"/>
+        <element name="PuntoInteres" positionX="358" positionY="81" width="128" height="150"/>
+        <element name="Multimedia" positionX="-65" positionY="90" width="128" height="90"/>
     </elements>
 </model>

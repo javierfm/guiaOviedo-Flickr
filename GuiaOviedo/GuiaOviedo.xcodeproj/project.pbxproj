@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C1CCEFB152AEC62002DE527 /* SubMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1CCEFA152AEC62002DE527 /* SubMenuViewController.m */; };
 		8C9EBCF31529C6B900142BF0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9EBCF21529C6B900142BF0 /* MapKit.framework */; };
 		8CA1C6191525AC4900BCF239 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA1C6181525AC4900BCF239 /* UIKit.framework */; };
 		8CA1C61B1525AC4900BCF239 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA1C61A1525AC4900BCF239 /* Foundation.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C1CCEF9152AEC62002DE527 /* SubMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubMenuViewController.h; sourceTree = "<group>"; };
+		8C1CCEFA152AEC62002DE527 /* SubMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubMenuViewController.m; sourceTree = "<group>"; };
 		8C9EBCF21529C6B900142BF0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8CA1C6141525AC4900BCF239 /* GuiaOviedo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuiaOviedo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA1C6181525AC4900BCF239 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -58,6 +61,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C1CCEFC152AEC6A002DE527 /* controladores */ = {
+			isa = PBXGroup;
+			children = (
+				8CA1C6321525AC4900BCF239 /* MasterViewController.h */,
+				8CA1C6331525AC4900BCF239 /* MasterViewController.m */,
+				8CA1C6351525AC4900BCF239 /* DetailViewController.h */,
+				8CA1C6361525AC4900BCF239 /* DetailViewController.m */,
+				8C1CCEF9152AEC62002DE527 /* SubMenuViewController.h */,
+				8C1CCEFA152AEC62002DE527 /* SubMenuViewController.m */,
+			);
+			name = controladores;
+			sourceTree = "<group>";
+		};
 		8CA1C6091525AC4800BCF239 = {
 			isa = PBXGroup;
 			children = (
@@ -90,13 +106,10 @@
 		8CA1C6201525AC4900BCF239 /* GuiaOviedo */ = {
 			isa = PBXGroup;
 			children = (
+				8C1CCEFC152AEC6A002DE527 /* controladores */,
 				8CA1C6291525AC4900BCF239 /* AppDelegate.h */,
 				8CA1C62A1525AC4900BCF239 /* AppDelegate.m */,
 				8CA1C62C1525AC4900BCF239 /* MainStoryboard.storyboard */,
-				8CA1C6321525AC4900BCF239 /* MasterViewController.h */,
-				8CA1C6331525AC4900BCF239 /* MasterViewController.m */,
-				8CA1C6351525AC4900BCF239 /* DetailViewController.h */,
-				8CA1C6361525AC4900BCF239 /* DetailViewController.m */,
 				8CA1C62F1525AC4900BCF239 /* GuiaOviedo.xcdatamodeld */,
 				8CA1C6211525AC4900BCF239 /* Supporting Files */,
 			);
@@ -181,6 +194,7 @@
 				8CA1C6311525AC4900BCF239 /* GuiaOviedo.xcdatamodeld in Sources */,
 				8CA1C6341525AC4900BCF239 /* MasterViewController.m in Sources */,
 				8CA1C6371525AC4900BCF239 /* DetailViewController.m in Sources */,
+				8C1CCEFB152AEC62002DE527 /* SubMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
