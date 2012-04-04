@@ -1,21 +1,17 @@
 //
-//  detalleLocalizacion.m
+//  CameraViewController.m
 //  GuiaOviedo
 //
-//  Created by svp on 03/04/12.
+//  Created by svp on 04.04.12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "detalleLocalizacion.h"
+#import "CameraViewController.h"
 
-@implementation detalleLocalizacion
-@synthesize labelNombre;
-@synthesize labelDireccion;
-@synthesize labelTelefono;
+@implementation CameraViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-     NSLog(@"6");
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -26,33 +22,31 @@
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
-    // [super didReceiveMemoryWarning];
+    [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
 
--(void) viewWillAppear:(BOOL)animated
+/*
+// Implement loadView to create a view hierarchy programmatically, without using a nib.
+- (void)loadView
 {
-    [super viewWillAppear:animated];
-    NSLog(@"7");
 }
+*/
 
+/*
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-      NSLog(@"8");
-    labelNombre.text=@"Texto de prueba";
 }
+*/
 
 - (void)viewDidUnload
 {
-    [self setLabelTelefono:nil];
-    [self setLabelDireccion:nil];
-    [self setLabelNombre:nil];
-   // [super viewDidUnload];
+    [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }

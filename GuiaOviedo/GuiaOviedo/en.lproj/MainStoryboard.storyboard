@@ -38,25 +38,22 @@
                                 <rect key="frame" x="0.0" y="660" width="703" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Vista satélite" id="cUF-PL-taj">
-                                        <connections>
-                                            <action selector="vistaSatelite:" destination="4" id="k2u-pr-h4W"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Wr6-5w-VPI"/>
                                     <barButtonItem style="plain" id="wUm-lW-Kg5">
-                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="2" id="SV5-1E-JLf">
-                                            <rect key="frame" x="111" y="8" width="207" height="30"/>
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="SV5-1E-JLf">
+                                            <rect key="frame" x="248" y="8" width="207" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
-                                                <segment title="1"/>
-                                                <segment title="2"/>
-                                                <segment title="3"/>
+                                                <segment title="Global"/>
+                                                <segment title="Normal"/>
+                                                <segment title="Cercano"/>
                                             </segments>
                                             <connections>
                                                 <action selector="variarZoom:" destination="4" eventType="valueChanged" id="IFb-hZ-7sd"/>
                                             </connections>
                                         </segmentedControl>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="55Y-ek-hdT"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -64,12 +61,20 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Detail" id="53">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="lFm-kU-BDh">
+                    <navigationItem key="navigationItem" id="53">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="gxc-Hj-Zck">
+                            <rect key="frame" x="211" y="7" width="281" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Satélite"/>
+                                <segment title="Tráfico"/>
+                            </segments>
                             <connections>
-                                <action selector="mostrar:" destination="4" id="OdN-oK-JUf"/>
+                                <action selector="vistaSatelite:" destination="4" eventType="valueChanged" id="JLj-ZP-tEa"/>
                             </connections>
-                        </barButtonItem>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="lFm-kU-BDh"/>
                     </navigationItem>
                     <connections>
                         <outlet property="mapa" destination="OAc-dg-aw5" id="y6k-XO-okD"/>
@@ -313,7 +318,8 @@
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
-                <relationship kind="action" name="mostrar:"/>
+                <relationship kind="action" name="variarZoom:"/>
+                <relationship kind="action" name="vistaSatelite:"/>
                 <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="mapa" candidateClass="MKMapView"/>
             </relationships>

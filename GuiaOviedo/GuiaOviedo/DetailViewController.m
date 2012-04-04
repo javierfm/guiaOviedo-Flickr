@@ -19,19 +19,8 @@
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
 @synthesize masterPopoverController = _masterPopoverController;
-@synthesize mapa,controladorPopover;
+@synthesize mapa,popOver;
 #pragma mark - Managing the detail item
-
--(IBAction)mostrar:(id)sender{
-    if(controladorPopover){
-        [controladorPopover dismissPopoverAnimated:YES];
-        controladorPopover=nil;
-    }else{
-        ControladorDetalle *a=[[ControladorDetalle alloc]init];
-        controladorPopover= [[UIPopoverController alloc] initWithContentViewController:a];
-        [controladorPopover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
-    }
-}
 
 - (void)setDetailItem:(id)newDetailItem
 {
@@ -41,7 +30,7 @@
         // Update the view.
         [self configureView];
     }
-    
+
     if (self.masterPopoverController != nil) {
         [self.masterPopoverController dismissPopoverAnimated:YES];
     }        
@@ -50,10 +39,10 @@
 - (void)configureView
 {
     // Update the user interface for the detail item.
-    
-    /* if (self.detailItem) {
-     self.detailDescriptionLabel.text = [self.detailItem description];
-     }*/
+
+   /* if (self.detailItem) {
+        self.detailDescriptionLabel.text = [self.detailItem description];
+    }*/
 }
 
 - (void)didReceiveMemoryWarning
@@ -81,7 +70,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+   
     CLLocationCoordinate2D coordenada;
     coordenada.latitude=43.3602994;
     coordenada.longitude=-5.844781;
@@ -158,10 +147,15 @@
 
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
-    detalleLocalizacion *detalleLoc=(detalleLocalizacion*)[[UIViewController alloc]initWithNibName:@"detalleLocalizacion" bundle:nil];
+    detalleLocalizacion *detalleLoc=[[detalleLocalizacion alloc]initWithNibName:@"detalleLocalizacion" bundle:nil];
+    NSLog(@"1");
+    
     self.popOver=[[UIPopoverController alloc]initWithContentViewController:detalleLoc];
+     NSLog(@"2"); 
     [popOver setPopoverContentSize:CGSizeMake(320, 200) animated:YES];
+      NSLog(@"3");
     [self.popOver presentPopoverFromRect:CGRectMake(mapView.bounds.origin.x+(mapView.bounds.size.width/2)-160, mapView.bounds.origin.y+(mapView.bounds.size.height/2)-100, 320, 200) inView:mapView permittedArrowDirections:NO animated:NO]; 
+      NSLog(@"4");
 }
 
 #pragma mark - Metodos propios
@@ -171,8 +165,8 @@
     //a esta region le asignamos la coordenada en la que se situará
     region.center =coordenada; 
     //asignamos ademas el nivel de zoom o detalle
-    region.span.latitudeDelta =.003;
-    region.span.longitudeDelta=.003;
+    region.span.latitudeDelta =zoom_min;
+    region.span.longitudeDelta=zoom_min;
     //hacemos que el mapa se centre en la region anterior de forma animada
     [mapa setRegion:region animated:TRUE];
 }
@@ -220,7 +214,7 @@
                 
                 miAnotacion *nA=[[miAnotacion alloc]initWithCoordenada:coordenada titulo:[objDict valueForKey:@"Nombre"] subtitulo:categoria];
                 [self.mapa addAnnotation:nA];
-                NSLog(@"Anotando %f titulo: %@",[[objDict valueForKey:@"lat"]floatValue],[objDict valueForKey:@"Nombre"]);		
+                NSLog(@"Anotando %f titulo: %@",[[objDict valueForKey:@"lat"]floatValue],[objDict valueForKey:@"Nombre"]);
             }
 
     }
@@ -229,7 +223,15 @@
 
 -(IBAction)vistaSatelite:(id)sender
 {
-    //if((UIBarButtonItem*)sender
+    switch ([sender selectedSegmentIndex]) {
+        case 0:
+            self.mapa.mapType=MKMapTypeSatellite;
+            break;
+        default:
+             self.mapa.mapType=MKMapTypeStandard;
+            break;
+    }
+    /*//if((UIBarButtonItem*)sender
     if (self.mapa.mapType==MKMapTypeStandard)
     {
         self.mapa.mapType=MKMapTypeSatellite;
@@ -239,7 +241,7 @@
     {
         self.mapa.mapType=MKMapTypeStandard;
         [(UIBarButtonItem*)sender setTitle:@"Vista satélite"];
-    }
+    }*/
 }
 
 -(IBAction)variarZoom:(id)sender

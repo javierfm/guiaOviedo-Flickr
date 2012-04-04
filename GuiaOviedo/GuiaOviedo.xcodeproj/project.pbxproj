@@ -25,8 +25,12 @@
 		8CA1C6311525AC4900BCF239 /* GuiaOviedo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1C62F1525AC4900BCF239 /* GuiaOviedo.xcdatamodeld */; };
 		8CA1C6341525AC4900BCF239 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1C6331525AC4900BCF239 /* MasterViewController.m */; };
 		8CA1C6371525AC4900BCF239 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1C6361525AC4900BCF239 /* DetailViewController.m */; };
-		8CA24091152C37CD00B288A8 /* ControladorDetalle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2408F152C37CD00B288A8 /* ControladorDetalle.m */; };
-		8CA24092152C37CD00B288A8 /* ControladorDetalle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CA24090152C37CD00B288A8 /* ControladorDetalle.xib */; };
+		8CA9FFFA152C4AF1001D2127 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA9FFF9152C4AF1001D2127 /* CoreLocation.framework */; };
+		8CA9FFFD152C4C0C001D2127 /* 1910.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8CA9FFFC152C4C0C001D2127 /* 1910.jpg */; };
+		8CB03D29152C68B20075CA04 /* Multimedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB03D28152C68B20075CA04 /* Multimedia.m */; };
+		8CB03D2C152C68B20075CA04 /* Evento.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB03D2B152C68B20075CA04 /* Evento.m */; };
+		8CB03D2F152C68B20075CA04 /* PuntoInteres.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB03D2E152C68B20075CA04 /* PuntoInteres.m */; };
+		8CB03D36152C6C5B0075CA04 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB03D35152C6C5B0075CA04 /* CameraViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,9 +62,16 @@
 		8CA1C6331525AC4900BCF239 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		8CA1C6351525AC4900BCF239 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		8CA1C6361525AC4900BCF239 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		8CA2408E152C37CD00B288A8 /* ControladorDetalle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControladorDetalle.h; sourceTree = "<group>"; };
-		8CA2408F152C37CD00B288A8 /* ControladorDetalle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControladorDetalle.m; sourceTree = "<group>"; };
-		8CA24090152C37CD00B288A8 /* ControladorDetalle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ControladorDetalle.xib; sourceTree = "<group>"; };
+		8CA9FFF9152C4AF1001D2127 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8CA9FFFC152C4C0C001D2127 /* 1910.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1910.jpg; sourceTree = "<group>"; };
+		8CB03D27152C68B20075CA04 /* Multimedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Multimedia.h; sourceTree = "<group>"; };
+		8CB03D28152C68B20075CA04 /* Multimedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Multimedia.m; sourceTree = "<group>"; };
+		8CB03D2A152C68B20075CA04 /* Evento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Evento.h; sourceTree = "<group>"; };
+		8CB03D2B152C68B20075CA04 /* Evento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Evento.m; sourceTree = "<group>"; };
+		8CB03D2D152C68B20075CA04 /* PuntoInteres.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuntoInteres.h; sourceTree = "<group>"; };
+		8CB03D2E152C68B20075CA04 /* PuntoInteres.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuntoInteres.m; sourceTree = "<group>"; };
+		8CB03D34152C6C5B0075CA04 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		8CB03D35152C6C5B0075CA04 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,16 +94,17 @@
 		8C1CCEFC152AEC6A002DE527 /* controladores */ = {
 			isa = PBXGroup;
 			children = (
+				8C1C48A9152B1D2900E1CE87 /* detalleLocalizacion.h */,
+				8C1C48AA152B1D2900E1CE87 /* detalleLocalizacion.m */,
+				8C1C48AB152B1D2900E1CE87 /* detalleLocalizacion.xib */,
 				8CA1C6321525AC4900BCF239 /* MasterViewController.h */,
-				8C1C4894152AF77B00E1CE87 /* miAnotacion.h */,
-				8C1C489C152AFB0500E1CE87 /* spotTiendas.h */,
-				8C1C489D152AFB0500E1CE87 /* spotTiendas.m */,
-				8C1C4895152AF77B00E1CE87 /* miAnotacion.m */,
 				8CA1C6331525AC4900BCF239 /* MasterViewController.m */,
 				8CA1C6351525AC4900BCF239 /* DetailViewController.h */,
 				8CA1C6361525AC4900BCF239 /* DetailViewController.m */,
 				8C1CCEF9152AEC62002DE527 /* SubMenuViewController.h */,
 				8C1CCEFA152AEC62002DE527 /* SubMenuViewController.m */,
+				8CB03D34152C6C5B0075CA04 /* CameraViewController.h */,
+				8CB03D35152C6C5B0075CA04 /* CameraViewController.m */,
 			);
 			name = controladores;
 			sourceTree = "<group>";
@@ -130,17 +142,16 @@
 		8CA1C6201525AC4900BCF239 /* GuiaOviedo */ = {
 			isa = PBXGroup;
 			children = (
-				8CA9FFFC152C4C0C001D2127 /* 1910.jpg */,
+				8CB03D33152C692B0075CA04 /* Plist */,
+				8CB03D32152C690C0075CA04 /* PinPersonalizados */,
+				8CB03D31152C68F60075CA04 /* Imagenes */,
+				8CB03D30152C68B80075CA04 /* ClasesObjetosGestionados */,
 				8C1CCEFC152AEC6A002DE527 /* controladores */,
 				8CA1C6291525AC4900BCF239 /* AppDelegate.h */,
 				8CA1C62A1525AC4900BCF239 /* AppDelegate.m */,
 				8CA1C62C1525AC4900BCF239 /* MainStoryboard.storyboard */,
-				8C1C4886152AF25B00E1CE87 /* localizaciones.plist */,
 				8CA1C62F1525AC4900BCF239 /* GuiaOviedo.xcdatamodeld */,
 				8CA1C6211525AC4900BCF239 /* Supporting Files */,
-				8CA2408E152C37CD00B288A8 /* ControladorDetalle.h */,
-				8CA2408F152C37CD00B288A8 /* ControladorDetalle.m */,
-				8CA24090152C37CD00B288A8 /* ControladorDetalle.xib */,
 			);
 			path = GuiaOviedo;
 			sourceTree = "<group>";
@@ -154,6 +165,46 @@
 				8CA1C6281525AC4900BCF239 /* GuiaOviedo-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8CB03D30152C68B80075CA04 /* ClasesObjetosGestionados */ = {
+			isa = PBXGroup;
+			children = (
+				8CB03D2D152C68B20075CA04 /* PuntoInteres.h */,
+				8CB03D2E152C68B20075CA04 /* PuntoInteres.m */,
+				8CB03D2A152C68B20075CA04 /* Evento.h */,
+				8CB03D2B152C68B20075CA04 /* Evento.m */,
+				8CB03D27152C68B20075CA04 /* Multimedia.h */,
+				8CB03D28152C68B20075CA04 /* Multimedia.m */,
+			);
+			name = ClasesObjetosGestionados;
+			sourceTree = "<group>";
+		};
+		8CB03D31152C68F60075CA04 /* Imagenes */ = {
+			isa = PBXGroup;
+			children = (
+				8CA9FFFC152C4C0C001D2127 /* 1910.jpg */,
+			);
+			name = Imagenes;
+			sourceTree = "<group>";
+		};
+		8CB03D32152C690C0075CA04 /* PinPersonalizados */ = {
+			isa = PBXGroup;
+			children = (
+				8C1C4894152AF77B00E1CE87 /* miAnotacion.h */,
+				8C1C489C152AFB0500E1CE87 /* spotTiendas.h */,
+				8C1C489D152AFB0500E1CE87 /* spotTiendas.m */,
+				8C1C4895152AF77B00E1CE87 /* miAnotacion.m */,
+			);
+			name = PinPersonalizados;
+			sourceTree = "<group>";
+		};
+		8CB03D33152C692B0075CA04 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				8C1C4886152AF25B00E1CE87 /* localizaciones.plist */,
+			);
+			name = Plist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +259,9 @@
 			files = (
 				8CA1C6251525AC4900BCF239 /* InfoPlist.strings in Resources */,
 				8CA1C62E1525AC4900BCF239 /* MainStoryboard.storyboard in Resources */,
-				8CA24092152C37CD00B288A8 /* ControladorDetalle.xib in Resources */,
+				8C1C4887152AF25B00E1CE87 /* localizaciones.plist in Resources */,
+				8C1C48AD152B1D2A00E1CE87 /* detalleLocalizacion.xib in Resources */,
+				8CA9FFFD152C4C0C001D2127 /* 1910.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +278,13 @@
 				8CA1C6341525AC4900BCF239 /* MasterViewController.m in Sources */,
 				8CA1C6371525AC4900BCF239 /* DetailViewController.m in Sources */,
 				8C1CCEFB152AEC62002DE527 /* SubMenuViewController.m in Sources */,
-				8CA24091152C37CD00B288A8 /* ControladorDetalle.m in Sources */,
+				8C1C4896152AF77B00E1CE87 /* miAnotacion.m in Sources */,
+				8C1C489E152AFB0500E1CE87 /* spotTiendas.m in Sources */,
+				8C1C48AC152B1D2A00E1CE87 /* detalleLocalizacion.m in Sources */,
+				8CB03D29152C68B20075CA04 /* Multimedia.m in Sources */,
+				8CB03D2C152C68B20075CA04 /* Evento.m in Sources */,
+				8CB03D2F152C68B20075CA04 /* PuntoInteres.m in Sources */,
+				8CB03D36152C6C5B0075CA04 /* CameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +364,7 @@
 				GCC_PREFIX_HEADER = "GuiaOviedo/GuiaOviedo-Prefix.pch";
 				INFOPLIST_FILE = "GuiaOviedo/GuiaOviedo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -316,6 +376,7 @@
 				GCC_PREFIX_HEADER = "GuiaOviedo/GuiaOviedo-Prefix.pch";
 				INFOPLIST_FILE = "GuiaOviedo/GuiaOviedo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

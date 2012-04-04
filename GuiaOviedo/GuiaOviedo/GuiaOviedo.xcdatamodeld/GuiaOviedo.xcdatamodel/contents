@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="10K549" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Evento" syncable="YES">
+    <entity name="Evento" representedClassName="Evento" syncable="YES">
         <attribute name="fin" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="inicio" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
@@ -8,12 +8,12 @@
         <relationship name="multimedias" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Multimedia" inverseName="evento" inverseEntity="Multimedia" syncable="YES"/>
         <relationship name="ubicacion" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="PuntoInteres" inverseName="eventos" inverseEntity="PuntoInteres" syncable="YES"/>
     </entity>
-    <entity name="Multimedia" syncable="YES">
+    <entity name="Multimedia" representedClassName="Multimedia" syncable="YES">
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tipo" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="evento" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Evento" inverseName="multimedias" inverseEntity="Evento" syncable="YES"/>
     </entity>
-    <entity name="PuntoInteres" syncable="YES">
+    <entity name="PuntoInteres" representedClassName="PuntoInteres" syncable="YES">
         <attribute name="direccion" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="latitud" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitud" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -27,7 +27,7 @@
     <fetchRequest name="Restaurantes" entity="PuntoInteres" predicateString="tipo == &quot;restaurante&quot;"/>
     <elements>
         <element name="Evento" positionX="133" positionY="45" width="128" height="135"/>
-        <element name="PuntoInteres" positionX="358" positionY="81" width="128" height="150"/>
         <element name="Multimedia" positionX="-65" positionY="90" width="128" height="90"/>
+        <element name="PuntoInteres" positionX="358" positionY="81" width="128" height="150"/>
     </elements>
 </model>
