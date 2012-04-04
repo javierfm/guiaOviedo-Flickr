@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapa;
+@property (strong,nonatomic)UIPopoverController *popOver;
 
 @property(retain,nonatomic)UIPopoverController *controladorPopover;
 

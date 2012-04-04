@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+		<key>Restaurantes</key>
+		<array>
+			<dict>
+				<key>Nombre</key>
+				<string>Tierra Astur</string>
+				<key>lat</key>
+				<string>43.363917</string>
+				<key>long</key>
+				<string>5.844153</string>
+				<key>direccion</key>
+				<string>Calle de Gascona 1</string>
+				<key>telefono</key>
+				<string>+34 985 20 25 02</string>
+				<key>web</key>
+				<string>http://www.tierra-astur.com</string>
+			</dict>
+		</array>
+		<key>Cajeros</key>
+		<array>
+			<dict>
+				<key>Nombre</key>
+				<string>Servired</string>
+				<key>lat</key>
+				<string>43.363499</string>
+				<key>long</key>
+				<string>-5.844909</string>
+				<key>direccion</key>
+				<string>Calle Jovellanos 11</string>
+				<key>telefono</key>
+				<string></string>
+				<key>web</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>Monumentos</key>
+		<array>
+			<dict>
+				<key>Nombre</key>
+				<string>Catedral de Oviedo</string>
+				<key>lat</key>
+				<string>43.362411</string>
+				<key>long</key>
+				<string>-5.843933</string>
+				<key>direccion</key>
+				<string>Plaza de Alfonso II &apos;El Casto&apos;</string>
+				<key>telefono</key>
+				<string>+34 985 20 53 88</string>
+				<key>web</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>Oficinas de turismo</key>
+		<array>
+			<dict>
+				<key>Nombre</key>
+				<string>El Escorialín</string>
+				<key>lat</key>
+				<string>43.361657</string>
+				<key>long</key>
+				<string>-5.848283</string>
+				<key>direccion</key>
+				<string>Esquina Calle Santa Cruz con Paseo de los Álamos</string>
+				<key>telefono</key>
+				<string>+34 985 22 75 86</string>
+				<key>web</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>Centros de salud</key>
+		<array>
+			<dict>
+				<key>Nombre</key>
+				<string>La Lila</string>
+				<key>lat</key>
+				<string>43.364974</string>
+				<key>long</key>
+				<string>-5.848036</string>
+				<key>direccion</key>
+				<string>Calle La Lila 2</string>
+				<key>telefono</key>
+				<string>+34 985 108 900</string>
+				<key>web</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>Bares de copas</key>
+		<array>
+			<dict>
+				<key>Nombre</key>
+				<string>Ca Beleño</string>
+				<key>lat</key>
+				<string>43.363872</string>
+				<key>long</key>
+				<string>-5.842095</string>
+				<key>direccion</key>
+				<string>Calle de Martínez Vigil 4</string>
+				<key>telefono</key>
+				<string>+34 985 22 95 34</string>
+				<key>web</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+</plist>
