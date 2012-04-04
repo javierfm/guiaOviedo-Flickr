@@ -20,6 +20,8 @@
 		8CA1C6311525AC4900BCF239 /* GuiaOviedo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1C62F1525AC4900BCF239 /* GuiaOviedo.xcdatamodeld */; };
 		8CA1C6341525AC4900BCF239 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1C6331525AC4900BCF239 /* MasterViewController.m */; };
 		8CA1C6371525AC4900BCF239 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1C6361525AC4900BCF239 /* DetailViewController.m */; };
+		8CA24091152C37CD00B288A8 /* ControladorDetalle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2408F152C37CD00B288A8 /* ControladorDetalle.m */; };
+		8CA24092152C37CD00B288A8 /* ControladorDetalle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CA24090152C37CD00B288A8 /* ControladorDetalle.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,9 @@
 		8CA1C6331525AC4900BCF239 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		8CA1C6351525AC4900BCF239 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		8CA1C6361525AC4900BCF239 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		8CA2408E152C37CD00B288A8 /* ControladorDetalle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControladorDetalle.h; sourceTree = "<group>"; };
+		8CA2408F152C37CD00B288A8 /* ControladorDetalle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControladorDetalle.m; sourceTree = "<group>"; };
+		8CA24090152C37CD00B288A8 /* ControladorDetalle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ControladorDetalle.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,9 @@
 				8CA1C62C1525AC4900BCF239 /* MainStoryboard.storyboard */,
 				8CA1C62F1525AC4900BCF239 /* GuiaOviedo.xcdatamodeld */,
 				8CA1C6211525AC4900BCF239 /* Supporting Files */,
+				8CA2408E152C37CD00B288A8 /* ControladorDetalle.h */,
+				8CA2408F152C37CD00B288A8 /* ControladorDetalle.m */,
+				8CA24090152C37CD00B288A8 /* ControladorDetalle.xib */,
 			);
 			path = GuiaOviedo;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 			files = (
 				8CA1C6251525AC4900BCF239 /* InfoPlist.strings in Resources */,
 				8CA1C62E1525AC4900BCF239 /* MainStoryboard.storyboard in Resources */,
+				8CA24092152C37CD00B288A8 /* ControladorDetalle.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +204,7 @@
 				8CA1C6341525AC4900BCF239 /* MasterViewController.m in Sources */,
 				8CA1C6371525AC4900BCF239 /* DetailViewController.m in Sources */,
 				8C1CCEFB152AEC62002DE527 /* SubMenuViewController.m in Sources */,
+				8CA24091152C37CD00B288A8 /* ControladorDetalle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

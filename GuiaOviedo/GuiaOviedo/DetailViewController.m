@@ -19,8 +19,19 @@
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
 @synthesize masterPopoverController = _masterPopoverController;
-@synthesize mapa;
+@synthesize mapa,controladorPopover;
 #pragma mark - Managing the detail item
+
+-(IBAction)mostrar:(id)sender{
+    if(controladorPopover){
+        [controladorPopover dismissPopoverAnimated:YES];
+        controladorPopover=nil;
+    }else{
+        ControladorDetalle *a=[[ControladorDetalle alloc]init];
+        controladorPopover= [[UIPopoverController alloc] initWithContentViewController:a];
+        [controladorPopover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    }
+}
 
 - (void)setDetailItem:(id)newDetailItem
 {
@@ -30,7 +41,7 @@
         // Update the view.
         [self configureView];
     }
-
+    
     if (self.masterPopoverController != nil) {
         [self.masterPopoverController dismissPopoverAnimated:YES];
     }        
@@ -39,10 +50,10 @@
 - (void)configureView
 {
     // Update the user interface for the detail item.
-
-   /* if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
-    }*/
+    
+    /* if (self.detailItem) {
+     self.detailDescriptionLabel.text = [self.detailItem description];
+     }*/
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,7 +81,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-   
+    
     CLLocationCoordinate2D coordenada;
     coordenada.latitude=43.3602994;
     coordenada.longitude=-5.844781;

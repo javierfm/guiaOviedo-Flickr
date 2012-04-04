@@ -40,7 +40,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="53">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="lFm-kU-BDh"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="lFm-kU-BDh">
+                            <connections>
+                                <action selector="mostrar:" destination="4" id="OdN-oK-JUf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapa" destination="OAc-dg-aw5" id="y6k-XO-okD"/>
@@ -284,6 +288,7 @@
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="mostrar:"/>
                 <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="mapa" candidateClass="MKMapView"/>
             </relationships>

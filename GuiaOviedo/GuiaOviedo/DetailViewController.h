@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MapKit/MapKit.h"
-
+#import "ControladorDetalle.h"
 
 @interface DetailViewController : UIViewController <UISplitViewControllerDelegate,MKMapViewDelegate,MKOverlay>
 
@@ -18,4 +18,8 @@
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapa;
 
+@property(retain,nonatomic)UIPopoverController *controladorPopover;
+
+
+-(IBAction)mostrar:(id)sender;
 @end
