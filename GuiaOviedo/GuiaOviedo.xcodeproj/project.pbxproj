@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		8C1C4887152AF25B00E1CE87 /* localizaciones.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C1C4886152AF25B00E1CE87 /* localizaciones.plist */; };
+		8C1C4896152AF77B00E1CE87 /* miAnotacion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C4895152AF77B00E1CE87 /* miAnotacion.m */; };
+		8C1C489E152AFB0500E1CE87 /* spotTiendas.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C489D152AFB0500E1CE87 /* spotTiendas.m */; };
+		8C1C48AC152B1D2A00E1CE87 /* detalleLocalizacion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C48AA152B1D2900E1CE87 /* detalleLocalizacion.m */; };
+		8C1C48AD152B1D2A00E1CE87 /* detalleLocalizacion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C1C48AB152B1D2900E1CE87 /* detalleLocalizacion.xib */; };
 		8C1CCEFB152AEC62002DE527 /* SubMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1CCEFA152AEC62002DE527 /* SubMenuViewController.m */; };
 		8C9EBCF31529C6B900142BF0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9EBCF21529C6B900142BF0 /* MapKit.framework */; };
 		8CA1C6191525AC4900BCF239 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA1C6181525AC4900BCF239 /* UIKit.framework */; };
@@ -21,10 +25,19 @@
 		8CA1C6311525AC4900BCF239 /* GuiaOviedo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1C62F1525AC4900BCF239 /* GuiaOviedo.xcdatamodeld */; };
 		8CA1C6341525AC4900BCF239 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1C6331525AC4900BCF239 /* MasterViewController.m */; };
 		8CA1C6371525AC4900BCF239 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1C6361525AC4900BCF239 /* DetailViewController.m */; };
+		8CA9FFFA152C4AF1001D2127 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA9FFF9152C4AF1001D2127 /* CoreLocation.framework */; };
+		8CA9FFFD152C4C0C001D2127 /* 1910.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8CA9FFFC152C4C0C001D2127 /* 1910.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8C1C4886152AF25B00E1CE87 /* localizaciones.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = localizaciones.plist; sourceTree = "<group>"; };
+		8C1C4894152AF77B00E1CE87 /* miAnotacion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = miAnotacion.h; sourceTree = "<group>"; };
+		8C1C4895152AF77B00E1CE87 /* miAnotacion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = miAnotacion.m; sourceTree = "<group>"; };
+		8C1C489C152AFB0500E1CE87 /* spotTiendas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spotTiendas.h; sourceTree = "<group>"; };
+		8C1C489D152AFB0500E1CE87 /* spotTiendas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = spotTiendas.m; sourceTree = "<group>"; };
+		8C1C48A9152B1D2900E1CE87 /* detalleLocalizacion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detalleLocalizacion.h; sourceTree = "<group>"; };
+		8C1C48AA152B1D2900E1CE87 /* detalleLocalizacion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detalleLocalizacion.m; sourceTree = "<group>"; };
+		8C1C48AB152B1D2900E1CE87 /* detalleLocalizacion.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = detalleLocalizacion.xib; sourceTree = "<group>"; };
 		8C1CCEF9152AEC62002DE527 /* SubMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubMenuViewController.h; sourceTree = "<group>"; };
 		8C1CCEFA152AEC62002DE527 /* SubMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubMenuViewController.m; sourceTree = "<group>"; };
 		8C9EBCF21529C6B900142BF0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -45,6 +58,8 @@
 		8CA1C6331525AC4900BCF239 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		8CA1C6351525AC4900BCF239 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		8CA1C6361525AC4900BCF239 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		8CA9FFF9152C4AF1001D2127 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8CA9FFFC152C4C0C001D2127 /* 1910.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1910.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CA9FFFA152C4AF1001D2127 /* CoreLocation.framework in Frameworks */,
 				8C9EBCF31529C6B900142BF0 /* MapKit.framework in Frameworks */,
 				8CA1C6191525AC4900BCF239 /* UIKit.framework in Frameworks */,
 				8CA1C61B1525AC4900BCF239 /* Foundation.framework in Frameworks */,
@@ -67,6 +83,10 @@
 			isa = PBXGroup;
 			children = (
 				8CA1C6321525AC4900BCF239 /* MasterViewController.h */,
+				8C1C4894152AF77B00E1CE87 /* miAnotacion.h */,
+				8C1C489C152AFB0500E1CE87 /* spotTiendas.h */,
+				8C1C489D152AFB0500E1CE87 /* spotTiendas.m */,
+				8C1C4895152AF77B00E1CE87 /* miAnotacion.m */,
 				8CA1C6331525AC4900BCF239 /* MasterViewController.m */,
 				8CA1C6351525AC4900BCF239 /* DetailViewController.h */,
 				8CA1C6361525AC4900BCF239 /* DetailViewController.m */,
@@ -96,6 +116,7 @@
 		8CA1C6171525AC4900BCF239 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CA9FFF9152C4AF1001D2127 /* CoreLocation.framework */,
 				8C9EBCF21529C6B900142BF0 /* MapKit.framework */,
 				8CA1C6181525AC4900BCF239 /* UIKit.framework */,
 				8CA1C61A1525AC4900BCF239 /* Foundation.framework */,
@@ -108,6 +129,7 @@
 		8CA1C6201525AC4900BCF239 /* GuiaOviedo */ = {
 			isa = PBXGroup;
 			children = (
+				8CA9FFFC152C4C0C001D2127 /* 1910.jpg */,
 				8C1CCEFC152AEC6A002DE527 /* controladores */,
 				8CA1C6291525AC4900BCF239 /* AppDelegate.h */,
 				8CA1C62A1525AC4900BCF239 /* AppDelegate.m */,
@@ -115,6 +137,9 @@
 				8C1C4886152AF25B00E1CE87 /* localizaciones.plist */,
 				8CA1C62F1525AC4900BCF239 /* GuiaOviedo.xcdatamodeld */,
 				8CA1C6211525AC4900BCF239 /* Supporting Files */,
+				8C1C48A9152B1D2900E1CE87 /* detalleLocalizacion.h */,
+				8C1C48AA152B1D2900E1CE87 /* detalleLocalizacion.m */,
+				8C1C48AB152B1D2900E1CE87 /* detalleLocalizacion.xib */,
 			);
 			path = GuiaOviedo;
 			sourceTree = "<group>";
@@ -183,6 +208,8 @@
 				8CA1C6251525AC4900BCF239 /* InfoPlist.strings in Resources */,
 				8CA1C62E1525AC4900BCF239 /* MainStoryboard.storyboard in Resources */,
 				8C1C4887152AF25B00E1CE87 /* localizaciones.plist in Resources */,
+				8C1C48AD152B1D2A00E1CE87 /* detalleLocalizacion.xib in Resources */,
+				8CA9FFFD152C4C0C001D2127 /* 1910.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +226,9 @@
 				8CA1C6341525AC4900BCF239 /* MasterViewController.m in Sources */,
 				8CA1C6371525AC4900BCF239 /* DetailViewController.m in Sources */,
 				8C1CCEFB152AEC62002DE527 /* SubMenuViewController.m in Sources */,
+				8C1C4896152AF77B00E1CE87 /* miAnotacion.m in Sources */,
+				8C1C489E152AFB0500E1CE87 /* spotTiendas.m in Sources */,
+				8C1C48AC152B1D2A00E1CE87 /* detalleLocalizacion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

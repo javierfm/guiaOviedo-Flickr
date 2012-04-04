@@ -28,12 +28,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="OAc-dg-aw5">
-                                <rect key="frame" x="0.0" y="0.0" width="703" height="704"/>
+                                <rect key="frame" x="0.0" y="0.0" width="703" height="660"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="4" id="0hx-gQ-sAy"/>
                                 </connections>
                             </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="4n5-e3-1X9">
+                                <rect key="frame" x="0.0" y="660" width="703" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Vista satélite" id="cUF-PL-taj">
+                                        <connections>
+                                            <action selector="vistaSatelite:" destination="4" id="k2u-pr-h4W"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="wUm-lW-Kg5">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="2" id="SV5-1E-JLf">
+                                            <rect key="frame" x="111" y="8" width="207" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="1"/>
+                                                <segment title="2"/>
+                                                <segment title="3"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="variarZoom:" destination="4" eventType="valueChanged" id="IFb-hZ-7sd"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -47,7 +72,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="448" y="248"/>
+            <point key="canvasLocation" x="516" y="248"/>
         </scene>
         <scene sceneID="18">
             <objects>
@@ -284,6 +309,8 @@
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="variarZoom:"/>
+                <relationship kind="action" name="vistaSatelite:"/>
                 <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="mapa" candidateClass="MKMapView"/>
             </relationships>
